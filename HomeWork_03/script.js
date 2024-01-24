@@ -154,11 +154,11 @@ class Product1 {
     }
     
     increaseCount(amount) {
-        if (amount <= 500) {
+        if (amount <= 500) { // установил лимит не более 500 продуктов
             this.quantity += amount;
             return this.quantity;
         } else {
-        return console.log("Quantity is too high");
+        return console.log("Quantity is too high"); 
     }
     }
     
