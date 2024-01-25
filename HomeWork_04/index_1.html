@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>HW_4_1</title>
+</head>
+<body>
+    <script>
+
+        // Задача 1.
+        // Необходимо получить список всех пользователей с помощью бесплатного API (https://jsonplaceholder.typicode.com/users) и отобразить их на странице.
+
+        const URL = 'https://jsonplaceholder.typicode.com/users';
+        
+        // Вариант 1
+
+        const getData = (URL) =>
+        new Promise((resolve, reject) => {
+            fetch(URL)
+                .then((response) => response.json())
+                .then((json) => resolve(json))
+                .catch((error) => reject(error));
+        });
+
+        getData(URL)
+            .then((data) => console.log(data))
+            .catch((error) => console.log(error));
+
+        // Вариант 2
+
+        fetch(URL)
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch((error) => console.error('Произошла ошибка'));
+            
+    </script>
+</body>
+</html>
+

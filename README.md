@@ -163,3 +163,15 @@
     console.log(product1.getCost()); // 10000
 
     const product2 = new Product('Ручка', 10, 5000); // выбросится ошибка "Quantity is too high"
+
+
+
+***Урок 4. Асинхронность в Javascript***
+
+- Задача 1.
+
+Необходимо получить список всех пользователей с помощью бесплатного API (https://jsonplaceholder.typicode.com/users) и отобразить их на странице.
+
+- Задача 2.
+
+Необходимо реализовать отрисовку 10 картинок собак из API https://dog.ceo/dog-api/ с интервалом в 3 секунды.
